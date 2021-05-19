@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\Users\\Brian\\Desktop\\Ex_Files_Java_JDBC\\Ex_Files_Java_JDBC\\Exercise Files\\02_GettingStarted\\ConnectMySQL"
+		}
+	],
+	"settings": {
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar",
+			"libs/mysql-connector-java-5.1.21-bin.jar"
+		]
+	}
+}

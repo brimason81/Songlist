@@ -1,0 +1,33 @@
+Songlist folder hierarchy:
+Tables:  table classes
+db:  Main.java, DBUtil.java, DBType.java
+Util:  PreparedStatements - InputHelper.java
+package:  Artist.java (bean) WTF IS A BEAN?
+Try (
+   w/ resources:
+   Connection ...
+   Statement ...
+   ResultSet ...
+   **Don't need to close if used - no need for finally block
+)
+
+ResultSet Methods:
+
+    last() - moves the cursor to the last row
+    first() - moves cursor to the first row
+    absolute(int row) - returns a specific row 
+
+    **MYSQL produces a scrollable ResultSet; HSQLDB does not.  The options
+      included in the Statement in Songs.java line 39 are to ensure that
+      the ResultSet is scrollable no matter which DB is being used.
+
+Statement methods:
+
+    setMaxRows(int numberOfRows) **can't be within try w/ resources block
+
+    **alternative:
+        ResultSet rs = stmt.executeQuery("SELECT ... FROM ... " + "LIMIT int numberOfRows"); || "LIMIT int startingRow, int numberOfRows" 
+    
+PreparedStatements:  JDBC Class that processes SQL queries with parameters
+
+    "SELECT column FROM table WHERE artistName = ?";  <----- question mark represents a variable to be input

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+	This page is for entering info in the database.
+	
+	exec() in PHP to execute Java script
+	Separate page for registration and login
+-->
+<?php
+	// Connecting to the database
+	require_once "SonglistLogin.php";
+	$db_server = mysqli_connect($db_hostname, $db_username, $db_password);
+	if (!$db_server) die("Unable to connect to the database " . mysql_error());
+
+	/* Code to enter songs into database - 
+	MUST BE ABLE TO IMPORT .TXT FILE ON THE PAGE. 
+	Probably have to enter different bands manually, then 
+	possibly click and drag songs by that band.
+	*/
+?>
+<html>
+<head>
+	<title>Songlist</title>
+	<link/ href="Songlist.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<form>
+	<!-- The following 2 text box inputs are for manually adding/selecting 
+		bands and new songs into the db-->
+	<tr>
+		<td><input type="text" name="band" placeholder="Band"></td>
+	</tr>
+	
+	<tr>
+		<td><input type="text" name="newSong" placeholder="Song"/></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+	</tr>
+	
+	
+</form>
+</body>
+</html>
